@@ -68,7 +68,7 @@ class MainActivity : AppCompatActivity() {
 
   fun openNavigationDrawer() {
     binding.drawer.openDrawer(GravityCompat.START)
-    viewModel.updateLastSyncTimestamp()
+    viewModel.run { updateLastSyncTimestamp() }
   }
 
   private fun initActionBar() {
@@ -86,6 +86,15 @@ class MainActivity : AppCompatActivity() {
   private fun onNavigationItemSelected(item: MenuItem): Boolean {
     when (item.itemId) {
       R.id.menu_sync -> {
+        viewModel.poll()
+        true
+      }
+    }
+//    TODO Timon: when clicked a new view should be opened where you can add items
+//    currently doing the same as sync button
+
+    when (item.itemId) {
+      R.id.item_add -> {
         viewModel.poll()
         true
       }

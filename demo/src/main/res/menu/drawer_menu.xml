@@ -2,9 +2,16 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 <group android:checkableBehavior="single">
   <item
+      android:id="@+id/item_add"
+      android:icon="@android:drawable/ic_input_add"
+      android:title="@string/add_items"
+      />
+
+  <item
             android:id="@+id/menu_sync"
             android:icon="@android:drawable/ic_popup_sync"
             android:title="@string/sync_menu"
         />
+
 </group>
 </menu>

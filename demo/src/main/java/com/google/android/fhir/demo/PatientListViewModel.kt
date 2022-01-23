@@ -119,7 +119,7 @@ class PatientListViewModel(application: Application, private val fhirEngine: Fhi
       Patient.ADDRESS_CITY,
       {
         modifier = StringFilterModifier.MATCHES_EXACTLY
-        value = "NAIROBI"
+        value = "Nairobi"
       }
     )
   }
