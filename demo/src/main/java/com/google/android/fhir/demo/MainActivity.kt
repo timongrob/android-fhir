@@ -99,6 +99,8 @@ class MainActivity : AppCompatActivity() {
         true
       }
     }
+
+//    Close drawer
     binding.drawer.closeDrawer(GravityCompat.START)
     return false
   }
